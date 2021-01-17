@@ -18,6 +18,23 @@ namespace ChooseYourOwnAdventure
       Console.Write(" Type YES or NO: ");
       string noiseChoice = Console.ReadLine();
       noiseChoice = noiseChoice.ToUpper();
+
+      string firstChoice = Console.ReadLine();
+      if (firstChoice == "NO") {
+        Console.WriteLine("Not much of an adventure");
+        Console.WriteLine(" if we never leave our room!");
+      } else if (firstChoice == "YES") {
+        Console.WriteLine("You walk into the");
+        Console.WriteLine("hallway and see");
+        Console.WriteLine("a light coming from under a door");
+        Console.WriteLine("down the hall.");
+        Console.WriteLine("you walk towards it.");
+        Console.WriteLine("do you open it or knock?");
+      }
+
+      Console.Write("Type OPEN or KNOCK: ");
+      string doorChoice = Console.ReadLine();
+      doorChoice = doorChoice.ToUpper();
      
     }
   }
