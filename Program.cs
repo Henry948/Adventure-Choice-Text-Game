@@ -26,17 +26,40 @@ namespace ChooseYourOwnAdventure
 
       } else if (noiseChoice == "YES") {
 
-        Console.Write("You walk into the ");
-        Console.Write("hallway and see ");
-        Console.Write("a light coming from under a door ");
-        Console.Write("down the hall. ");
-        Console.Write("you walk towards it. ");
-        Console.Write("do you open it or knock? ");
+        Console.WriteLine("You walk into the ");
+        Console.WriteLine("hallway and see ");
+        Console.WriteLine("a light coming from under a door ");
+        Console.WriteLine("down the hall. ");
+        Console.WriteLine("you walk towards it. ");
+        Console.WriteLine("do you open it or knock? ");
         Console.Write(" Type OPEN or KNOCK: ");
+
+      }
         string doorChoice = Console.ReadLine();
         doorChoice = doorChoice.ToUpper();
-      }
 
+        if (doorChoice == "OPEN") {
+          Console.Write("A voice behind the door speaks. It says,");
+          Console.Write("Answer this riddle:");
+          Console.write("Poor people have me.");
+          Console.Write("Rich people need me.");
+          Console.Write("If you eat me, you die. What am i?");
+
+          Console.Write("Type your Answer: ");
+          string riddleAnswer = Console.ReadLine();
+          riddleAnswer = riddleAnswer.ToUpper();
+
+          if (riddleAsnwer == "NOTHING") {
+            Console.Write("The door opens and NOTHING is there.");
+            Console.Write("You turn off the light and run back to your room and lock the door.");
+            Console.Write("THE END.")
+          } else {
+            Console.WriteLine("INCORRECT answer. The door doesnt open. THE END");
+          }
+
+        } else if (doorChoice == "KNOCK") {
+          
+        }
 
 
      
