@@ -21,17 +21,17 @@ namespace ChooseYourOwnAdventure
 
       if (noiseChoice == "NO") {
 
-        Console.WriteLine("Not much of an adventure");
-        Console.WriteLine(" if we never leave our room!");
+        Console.Write("Not much of an adventure");
+        Console.Write(" if we never leave our room!");
 
       } else if (noiseChoice == "YES") {
 
-        Console.WriteLine("You walk into the ");
-        Console.WriteLine("hallway and see ");
-        Console.WriteLine("a light coming from under a door ");
-        Console.WriteLine("down the hall. ");
-        Console.WriteLine("you walk towards it. ");
-        Console.WriteLine("do you open it or knock? ");
+        Console.Write("You walk into the ");
+        Console.Write("hallway and see ");
+        Console.Write("a light coming from under a door ");
+        Console.Write("down the hall. ");
+        Console.Write("you walk towards it. ");
+        Console.Write("do you open it or knock? ");
         Console.Write(" Type OPEN or KNOCK: ");
 
       }
@@ -39,31 +39,55 @@ namespace ChooseYourOwnAdventure
         doorChoice = doorChoice.ToUpper();
 
         if (doorChoice == "OPEN") {
-          Console.Write("A voice behind the door speaks. It says,");
-          Console.Write("Answer this riddle:");
-          Console.write("Poor people have me.");
-          Console.Write("Rich people need me.");
-          Console.Write("If you eat me, you die. What am i?");
+          Console.WriteLine("The door is locked! See if one of your keys will open it!");
+
+          Console.Write("Enter a number (1-3): ");
+          string keyChoice = Console.ReadLine();
+
+          switch (keyChoice){
+            case "1":
+            Console.Write("You chose the first key! ");
+            Console.Write("Lucky Choice! ");
+            Console.Write("The door opens and NOTHING is there. ");
+            Console.Write("Strange... ");
+            Console.Write("THE END.");
+            break;
+            case "2":
+            Console.Write("You chose the second key! ");
+            Console.Write("The door doesnt open ");
+            Console.Write("THE END");
+            break;
+            case "3":
+            Console.Write("You chose the third key! ");
+            Console.Write("The door doesnt open ");
+            Console.Write("THE END");
+            break;
+            default:
+            break;
+          }
+    
+
+        } else if (doorChoice == "KNOCK") {
+
+                Console.Write("A voice behind the door speaks. It says, ");
+          Console.Write("Answer this riddle: ");
+          Console.Write("Poor people have me. ");
+          Console.Write("Rich people need me. ");
+          Console.Write("If you eat me, you die. What am i? ");
 
           Console.Write("Type your Answer: ");
           string riddleAnswer = Console.ReadLine();
           riddleAnswer = riddleAnswer.ToUpper();
 
-          if (riddleAsnwer == "NOTHING") {
-            Console.Write("The door opens and NOTHING is there.");
-            Console.Write("You turn off the light and run back to your room and lock the door.");
-            Console.Write("THE END.")
+          if (riddleAnswer == "NOTHING") {
+            Console.Write("The door opens and NOTHING is there. ");
+            Console.Write("You turn off the light and run back to your room and lock the door. ");
+            Console.Write("THE END. ");
           } else {
             Console.WriteLine("INCORRECT answer. The door doesnt open. THE END");
           }
-
-        } else if (doorChoice == "KNOCK") {
-          
         }
-
-
-     
+      }
     }
   }
-}
 
