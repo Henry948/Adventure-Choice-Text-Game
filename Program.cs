@@ -6,7 +6,7 @@ namespace ChooseYourOwnAdventure
   {
       static void Main(string[] args)
     {
-      // THE MYSTERIOUS NOISE 
+      // THE MYSTERIOUS NOISE EXTENSIVE TESTING CARRIED OUT. PROGRAM WORKS!
       Console.Write("What is your name?: ");
       string name = Console.ReadLine();
       Console.WriteLine($"Hello, {name}! Welcome to our story.");
